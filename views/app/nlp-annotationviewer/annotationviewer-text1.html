@@ -1,0 +1,3 @@
+<div class="appviewer_text_div">
+	<span ng-repeat="node in avp.getSpans()" id='{{::node.id}}' ng-click=avp.setClickLocation(node.begin,$event)  ng-mouseover="avp.hoverIn(node.begin,$event)" ng-mouseleave="avp.hoverOut(node.begin,$event)">{{::avp.getSpanText(node,node.id)}}</span>
+</div>

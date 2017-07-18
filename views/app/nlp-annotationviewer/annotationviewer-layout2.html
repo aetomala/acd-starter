@@ -1,0 +1,19 @@
+<table class="table-bordered" style="width:100%;table-layout:fixed">
+  <tr class="appviewer">
+
+    <td class="appviewer_annos" ng-if="avp.showAnnotationsPanel" annotationviewer-annotations1></td>
+
+    <td class="appviewer_text" annotationviewer-text1></td>
+
+    <td class="appviewer_types">
+      <div class="appviewer_types_div panel-borderless">
+        <div>
+          <button class="btn btn-inverse" ng-if="avp.showAnnotationsPanel" ng-click="avp.showAnnotationsPanel = !avp.showAnnotationsPanel">Hide Details</button>
+          <button class="btn btn-inverse" ng-if="!avp.showAnnotationsPanel" ng-click="avp.showAnnotationsPanel = !avp.showAnnotationsPanel">Show Details</button>
+          <div annotationviewer-legend2></div>
+        </div>
+      </div>
+    </td>
+
+  </tr>
+</table>

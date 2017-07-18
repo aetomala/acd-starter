@@ -1,0 +1,16 @@
+<div>
+  <ul class="list-unstyled">
+
+    <li><b>Select All</b> <input type='checkbox' ng-model=theValue ng-value-true=true ng-value-false=false ng-change="avp.toggleAll(theValue)"/></li>
+
+    <div ng-repeat="agroup in avp.getTypeGroups() | orderBy:'name'">
+	  <li class="divider"></li>
+      <li><b>Group:</b> {{agroup.name}}
+      <input type='checkbox' name="agroup.name" ng-model=agroup.colorme ng-value-true=true ng-value-false=false ng-change="avp.toggleGroup(agroup.name, agroup.colorme)"/></li>
+
+      <div ng-repeat="atype in avp.getTypesForGroup(agroup.name) | orderBy:'name'">
+        <li annotationviewer-type1></li>
+      </div>
+    </div>
+  </ul>
+</div>

@@ -1,0 +1,20 @@
+<div style="horizontal-align=center;">
+  <h1>Advanced Care Insights Service<p><small>Specify the text to be analyzed using the given annotator analytic id.</small></p></h1>
+</div>
+<!-- Loading Watson Avatar Template -->
+<script type="text/ng-template" id="watsonAvatar.html">
+  	<!-- Loading animation div -->
+	<p>
+	<div style="text-align:center;vertical-align:middle">
+		<object id="watsonAvatarDialogSVG" data="./images/watson-loading-avatar.svg" type="image/svg+xml" width="100px" height="100px" style="margin-top: 24px"></object>
+		<div style="padding-top:5px;horizontal-align:center">Processing request ...</div>
+	</div>
+	</p>
+</script>
+<div class="form-group">
+	<div ng-dropdown-multiselect="" options="annotator_options" selected-model="annotators_selected"></div>
+	<br>
+	<textarea id="input" class="form-control" rows="3" cols="50" ng-model="$parent.inputText" uib-tooltip="Enter/paste in some raw text below, then click the Analyze button below to run the text through the specified analytic." tooltip-trigger="mouseenter" tooltip-placement="top" placeholder="Enter or paste sample text here for analytic evaluation"></textarea>
+</div>
+<button ng-click="processFile1()">Analyze</button>
+<button ng-click="processClear()">Clear</button>

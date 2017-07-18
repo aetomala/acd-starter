@@ -1,0 +1,8 @@
+<div class="appviewer_annos_div">
+	<div class="appviewer_annos_getAnno_div" ng-repeat="annot in avp.getAnnotations()" ng-if="(annot.begin <= avp.clickindex && annot.end > avp.clickindex) || (annot.begin <= avp.hoverindex && annot.end > avp.hoverindex)">
+  		<ul class="list-unstyled">
+      		<li ng-repeat="(key,prop) in annot" annotationviewer-annotation1></li>
+      		<hr/>
+  		</ul>
+	</div>
+</div>

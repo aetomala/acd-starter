@@ -1,0 +1,23 @@
+{
+  "services": {
+    "acd-default": [
+    {
+      "credentials": {
+        "url": "https://watsonpow01.rch.stglabs.ibm.com/services/advanced_care_insights/api/v1",
+        "username": "whateverworks",
+        "password": "whateverworks"
+      },
+      "syslog_drain_url": null,
+      "label": "advanced_annotator_data.dev",
+      "provider": null,
+      "plan": "experimental",
+      "name": "ACD-01",
+      "tags": [
+        "watson",
+        "ibm_created",
+        "ibm_experimental"
+      ]
+    }
+  ]
+  }
+}
