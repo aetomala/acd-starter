@@ -1,8 +1,12 @@
+---
+declared-services: 
+  sample-nodejs-cloudant-cloudantNoSQLDB:
+    label: cloudantNoSQLDB 
+    plan: Lite 
 applications:
  - name: random-aetomala-application
-   host: random-aetomala-application
-   instances: 1
    memory: 256M
    disk_quota: 512M
    random-route: true
-   buildpack: sdk-for-nodejs
+   services:
+  - sample-nodejs-cloudant-cloudantNoSQLDB
