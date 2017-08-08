@@ -1,12 +1,12 @@
 ---
 declared-services: 
-  sample-nodejs-cloudant-cloudantNoSQLDB:
-    label: cloudantNoSQLDB 
-    plan: Lite 
+  sample-nodejs-acd:
+    label: advanced_annotated_data.dev 
+    plan: Experimental 
 applications:
  - name: random-aetomala-application
    memory: 256M
    disk_quota: 512M
    random-route: true
    services:
-  - sample-nodejs-cloudant-cloudantNoSQLDB
+  - sample-nodejs-acd
