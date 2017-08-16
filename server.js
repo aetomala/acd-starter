@@ -16,7 +16,8 @@ app.use(bodyParser.json())
 var annotatorService;
 
 // user defined environment variable to test different ACD registered services
-var _tmpSrvName = process.env.SERVICE_NAME;
+//var _tmpSrvName = process.env.SERVICE_NAME;
+var _tmpSrvName = "advanced_annotated_data.dev";
 var servicename = _tmpSrvName ? _tmpSrvName :'acd-default';
 
 /**
