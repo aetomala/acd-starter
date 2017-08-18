@@ -40,6 +40,7 @@ var servicename = _tmpSrvName ? _tmpSrvName :'acd-default';
  *  "inUseMemoryMb": 0,
  *  "availableProcessors": 0
  * }
+ * @see https://watsonpow01.rch.stglabs.ibm.com/services/advanced_care_insights/documentation/api/#/
  * @return A status object
  */
 app.get("/api/status", function (request, response){
@@ -86,6 +87,7 @@ app.get("/api/status", function (request, response){
  *    "string"
  *  ]
  * }
+ * @see https://watsonpow01.rch.stglabs.ibm.com/services/advanced_care_insights/documentation/api/#/
  * @return a list of analytic ids that can be queried for capability metadata or sent data for processing
  */
 app.get("/api/analytics", function(request, response){
@@ -110,6 +112,17 @@ app.get("/api/analytics", function(request, response){
     }
   }).auth(annotatorService.credentials.username, annotatorService.credentials.password);
 });
+
+/*
+ * <code>
+ * POST http://localhost:3000/api/analytics
+ * </code>
+ * {
+ *  "analyzedData": "string"
+ * }
+ *
+ * @see https://watsonpow01.rch.stglabs.ibm.com/services/advanced_care_insights/documentation/api/#/
+ */
 
 app.post("/api/analytics/:analytic_id", function(request, response){
   console.log("calling /api/analytics/:analytic_id");
