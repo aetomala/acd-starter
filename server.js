@@ -82,6 +82,8 @@ app.get("/api/status", function (request, response){
  * <code>
  * GET http://localhost:3000/api/analytics
  * </code>
+ *
+ * Response:
  * {
  *  "annotatorNames": [
  *    "string"
@@ -113,14 +115,16 @@ app.get("/api/analytics", function(request, response){
   }).auth(annotatorService.credentials.username, annotatorService.credentials.password);
 });
 
-/*
+/**
+ *
  * <code>
  * POST http://localhost:3000/api/analytics
  * </code>
+ *
+ * Response:
  * {
  *  "analyzedData": "string"
  * }
- *
  * @see https://watsonpow01.rch.stglabs.ibm.com/services/advanced_care_insights/documentation/api/#/
  */
 
